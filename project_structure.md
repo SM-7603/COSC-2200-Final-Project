@@ -1,6 +1,6 @@
 # Durak PROJECT STRUCTURE.
 
-> This is the project structre for the game Durak.
+> This is the project structure for the game Durak.
 
 durak_game/
 │
@@ -14,8 +14,8 @@ durak_game/
 │
 ├── assets/                  # Folder for graphical assets like card images
 │   ├── card_faces/          # Contains images for each card face
-│   └── back.png             # Back of the card image
-│
+│   ├── back.png             # Back of the card image
+│   └── background.jpg           # Background image for the game table
 ├── data/                    # Folder for data persistence (e.g., JSON files)
 │   ├── game_states.json     # Save game states
 │   ├── user_preferences.json# User preferences settings
