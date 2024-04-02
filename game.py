@@ -31,7 +31,7 @@ class Game:
             ai_played_card = self.ai_player.play_card(self)
             print(f"AI played: {ai_played_card}")
             
-            # Simple bout win logic, assuming higher rank wins and trump suit beats other suits
+            # Simple win logic, assuming higher rank wins and trump suit beats other suits
             if played_card.suit == ai_played_card.suit:
                 bout_winner = "You" if played_card.rank > ai_played_card.rank else "AI"
             elif played_card.suit == self.trump_suit:

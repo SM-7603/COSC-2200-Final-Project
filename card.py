@@ -1,4 +1,3 @@
-
 # card.py
 class Card:
     suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
