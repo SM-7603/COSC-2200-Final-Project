@@ -1,4 +1,3 @@
-# card.py
 class Card:
     suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
     ranks = ['6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace']
