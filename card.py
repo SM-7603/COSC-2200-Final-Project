@@ -6,5 +6,8 @@ class Card:
         self.suit = suit
         self.rank = rank
 
+    def get_rank_index(self):
+        return Card.ranks.index(self.rank)
+
     def __repr__(self):
         return f"{self.rank} of {self.suit}"
