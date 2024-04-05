@@ -90,6 +90,7 @@ class Game:
             print(f"Number of cards in {player.name}'s hand after taking cards: {len(player.hand)}")
             self.winning_player = self.player
             self.losing_player = self.ai_player
+            self.redistribute_cards(self.losing_player, self.winning_player)
             
     def defend(self, player):
         print(f"\n{player.name} is defending.")
@@ -127,6 +128,7 @@ class Game:
                     print(f"Number of cards in {player.name}'s hand after taking cards: {len(player.hand)}")
                     self.winning_player = self.ai_player
                     self.losing_player = self.player
+                    self.redistribute_cards(self.losing_player, self.winning_player)
                     break
             else:
                 print(f"{player.name} has no valid cards to play. GAME OVER")
@@ -137,6 +139,7 @@ class Game:
                 print(f"Number of cards in {player.name}'s hand after taking cards: {len(player.hand)}")
                 self.winning_player = self.ai_player
                 self.losing_player = self.player
+                self.redistribute_cards(self.losing_player, self.winning_player)
                 break
 
     def ai_defend(self, player):
@@ -163,6 +166,7 @@ class Game:
                 print(f"Number of cards in {player.name}'s hand after taking cards: {len(player.hand)}")
                 self.winning_player = self.player
                 self.losing_player = self.ai_player
+                self.redistribute_cards(self.losing_player, self.winning_player)
         else:
             print(f"{player.name} has no valid cards to play. GAME OVER")
             print(f"Number of cards on the table before taking: {len(self.table_cards)}")
@@ -172,9 +176,13 @@ class Game:
             print(f"Number of cards in {player.name}'s hand after taking cards: {len(player.hand)}")
             self.winning_player = self.player
             self.losing_player = self.ai_player
+            self.redistribute_cards(self.losing_player, self.winning_player)
             
 
     def redistribute_cards(self, losing_player, winning_player):
+        # TO DO make winning and losing player redistribution and extends of the table card in this function.
+
+
         while len(winning_player.hand) < 6 and self.deck.cards:
             winning_player.hand.append(self.deck.deal())
 
