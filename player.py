@@ -12,6 +12,17 @@ class Player:
     def play_card(self, index):
         # Play a card from the player's hand at the specified index
         return self.hand.pop(index) if index < len(self.hand) else None
+    
+    def has_valid_card(self, game_state):
+        # Check if the player has any valid cards to play
+        if game_state.table_cards:
+            attacking_card = game_state.table_cards[-1]
+            for card in self.hand:
+                if self.is_valid_card(card, game_state, attacking_card):
+                    return True
+            return False
+        else:
+            return True
 
 class AIPlayer(Player):
     def __init__(self):
@@ -56,8 +67,17 @@ class AIPlayer(Player):
 
         else:
             # It's the AI's turn to attack, choose the best card based on availability and trump suit
-            selected_card = max(valid_cards, key=lambda card: (card.suit == game_state.trump_suit, -card.get_rank_index()))
-            reason = "first turn, playing highest card based on trump suitability"
+            # Check if there are multiple trump cards
+            trump_cards = [card for card in valid_cards if card.suit == game_state.trump_suit]
+            if trump_cards:
+                # If multiple trump cards are available, play the highest one
+                selected_card = max(trump_cards, key=lambda card: card.get_rank_index())
+                reason = "first turn, playing highest trump card"
+            else:
+                # If no trump cards are available, play the highest-ranked card
+                selected_card = max(valid_cards, key=lambda card: card.get_rank_index())
+                reason = "first turn, playing highest card"
+
 
         if selected_card:
             print(f"AI selects {selected_card} because it's the {reason}.")  # Debugging
@@ -120,6 +140,9 @@ class AIPlayer(Player):
 
     def is_valid_card(self, card, game_state, attacking_card=None):
         # For defending: Check if the card can legally beat the attacking card
+        if game_state.table_cards:
+            attacking_card = game_state.table_cards[-1]
+
         if attacking_card:
             if card.suit == attacking_card.suit and card.ranks.index(card.rank) > card.ranks.index(attacking_card.rank):
                 # The card is of the same suit and has a higher rank
