@@ -99,7 +99,7 @@ class AIPlayer(Player):
         return selected_card
 
 
-    def play_trump_card(self, cards, game_state):
+def play_trump_card(self, cards, game_state):
 <<<<<<< HEAD
         trump_cards = [card for card in cards if card.suit == game_state.trump_suit]
         
