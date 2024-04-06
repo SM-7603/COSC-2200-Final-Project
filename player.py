@@ -156,3 +156,6 @@ class AIPlayer(Player):
             # Attacking scenario or no specific card to compare against: All cards are valid
             return True
 
+    def draw_card(self, deck):
+        if deck.cards:  # Check if there are cards left in the deck
+            self.hand.append(deck.deal())  # `deal` should return a single card from the deck
