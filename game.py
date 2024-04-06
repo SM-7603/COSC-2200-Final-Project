@@ -49,8 +49,10 @@ class Game:
 
     def attack(self, player):
         print(f"\nYour hand: {', '.join(map(str, self.player.hand))}")
+        
         # There should not be card showing to 
-        # print(f"AI hand: {', '.join(map(str, self.ai_player.hand))}")
+        print(f"AI hand: {', '.join(map(str, self.ai_player.hand))}")
+
         while True:
             card_index = int(input("Enter the index of the card you wish to play (0-based), or 'q' to quit: "))
             if card_index == 'q':

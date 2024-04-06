@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 from deck import Deck
 from player import AIPlayer, Player
+import random
 
 class Game:
     def __init__(self, root):
@@ -13,6 +14,7 @@ class Game:
         self.ai_player = AIPlayer()
         self.trump_suit = None
         self.table_cards = []
+        self.attacking_player = None  # Add attacking_player attribute
 
         self.setup_game()
 
@@ -22,21 +24,21 @@ class Game:
         for _ in range(6):
             self.player.draw_card(self.deck)
             self.ai_player.draw_card(self.deck)
-        # Determine the trump suit
-        self.trump_suit = self.deck.cards[-1].suit
-        messagebox.showinfo("Trump Suit", f"The trump suit is {self.trump_suit}")
+        # Determine the trump suit if not chosen yet
+        if self.trump_suit is None:
+            self.trump_suit = random.choice(self.deck.cards).suit
+            messagebox.showinfo("Trump Suit", f"The trump suit is {self.trump_suit}")
+        self.attacking_player = self.player  # Set attacking player at the start
 
     def start_game_loop(self):
-        attacking_player = self.player
-
         while self.player.hand and self.ai_player.hand:
             messagebox.showinfo("New Round", "New round!")
             self.table_cards.clear()
 
             # Attacking phase
-            messagebox.showinfo("Attacking", f"{attacking_player.name} is attacking.")
-            self.attack(attacking_player)
-            defending_player = self.ai_player if attacking_player == self.player else self.player
+            messagebox.showinfo("Attacking", f"{self.attacking_player.name} is attacking.")
+            self.attack(self.attacking_player)
+            defending_player = self.ai_player if self.attacking_player == self.player else self.player
 
             # Defending phase
             self.defend(defending_player)
@@ -49,8 +51,8 @@ class Game:
                     messagebox.showinfo("Round Result", "AI wins this round!")
                 else:
                     messagebox.showinfo("Round Result", "You win this round!")
-                attacking_player = self.ai_player if defending_player == self.player else self.player
-                self.redistribute_cards(attacking_player)
+                self.attacking_player = self.ai_player if defending_player == self.player else self.player
+                self.redistribute_cards(self.attacking_player)
 
         messagebox.showinfo("Game Over", "Game over!")
 
