@@ -23,6 +23,23 @@ class Player:
             return False
         else:
             return True
+    def is_valid_card(self, card, game_state, attacking_card=None):
+        # For defending: Check if the card can legally beat the attacking card
+        if game_state.table_cards:
+            attacking_card = game_state.table_cards[-1]
+
+        if attacking_card:
+            if card.suit == attacking_card.suit and card.ranks.index(card.rank) > card.ranks.index(attacking_card.rank):
+                # The card is of the same suit and has a higher rank
+                return True
+            elif card.suit == game_state.trump_suit and attacking_card.suit != game_state.trump_suit:
+                # The card is a trump card, and the attacking card is not
+                return True
+            else:
+                return False
+        else:
+            # Attacking scenario or no specific card to compare against: All cards are valid
+            return True
 
 class AIPlayer(Player):
     def __init__(self):
