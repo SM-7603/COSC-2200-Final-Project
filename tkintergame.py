@@ -1,7 +1,7 @@
 import tkinter as tk
-from tkinter import messagebox
 from deck import Deck
 from player import Player, AIPlayer
+from PIL import Image, ImageTk
 
 class DurakApp:
     def __init__(self, root):
@@ -9,6 +9,10 @@ class DurakApp:
         self.root.title("Durak")
         self.game = None  # Game object will be initialized when starting the game
         self.selected_card = None
+
+        # Load background image
+        self.background_img = Image.open("background.png")
+        self.background_photo = ImageTk.PhotoImage(self.background_img)
         
         self.create_widgets()
 
@@ -43,11 +47,11 @@ class DurakApp:
         self.display_game()
 
     def display_game(self):
-        self.clear_output()
+        self.print_output.delete("1.0", tk.END)  # Clear text display
         self.append_output("New game started!\n")
         self.update_card_options()
 
-        while self.game.player.hand and self.game.ai_player.hand:
+        while self.game.player.hand or self.game.ai_player.hand:
             self.append_output("\nNew round!\n")
             self.append_output(f"Trump suit: {self.game.trump_suit}\n")
 
@@ -59,20 +63,21 @@ class DurakApp:
             self.append_output(f"\n{attacking_player.name} is attacking.\n")
             self.play_attack(attacking_player)
 
+            # Check if the defending player has any cards left
+            if not defending_player.hand:
+                break
+
             # Defending phase
             self.append_output(f"\n{defending_player.name} is defending.\n")
             self.play_defend(defending_player)
 
         # Check for winner
-        if not defending_player.hand:
-            self.append_output(f"{defending_player.name} couldn't defend. Taking cards...\n")
-            defending_player.hand.extend(self.game.table_cards)
-            self.game.table_cards.clear()
-            self.append_output(f"{attacking_player.name} wins this round!\n")
-            attacking_player = self.game.ai_player if defending_player == self.game.player else self.game.player
-            self.redistribute_cards(attacking_player)
-
-        self.append_output("\nGame over!\n")
+        if not self.game.ai_player.hand:
+            self.append_output("You win!\n")
+        elif not self.game.player.hand:
+            self.append_output("You lose!\n")
+        else:
+            self.append_output("Game over!\n")
 
     def update_card_options(self):
         menu = self.card_dropdown["menu"]
@@ -84,16 +89,29 @@ class DurakApp:
     def play_selected_card(self):
         selected_card = self.card_options.get()
         if selected_card:
-            if selected_card in self.game.player.hand:
+            # Check if the selected card is in the player's hand
+            if selected_card in [str(card) for card in self.game.player.hand]:
                 self.selected_card = selected_card
                 self.append_output(f"You played: {selected_card}\n")
-                self.game.player.hand.remove(selected_card)  # Remove the played card from the player's hand
+                # Find the card object from the player's hand and remove it
+                for card in self.game.player.hand:
+                    if str(card) == selected_card:
+                        self.game.player.hand.remove(card)
+                        break
                 self.game.table_cards.append(selected_card)  # Add the played card to the table
-                self.display_game()  # Update the display
+                self.play_ai_turn()  # Proceed to AI's turn
             else:
                 self.append_output("The selected card is not in your hand. Please select a card from your hand.\n")
         else:
             self.append_output("Please select a card to play.\n")
+
+    def play_ai_turn(self):
+        if self.game.ai_player.hand:
+            self.play_attack(self.game.ai_player)
+            if self.game.player.hand:
+                self.play_defend(self.game.player)
+        else:
+            self.check_winner()
 
     def play_attack(self, player):
         self.append_output(f"{player.name}'s hand: {', '.join(map(str, player.hand))}\n")
@@ -112,36 +130,53 @@ class DurakApp:
                 self.game.table_cards.clear()
                 self.game.attacking_player = self.game.player
 
-        def play_defend(self, player):
-            self.append_output(f"{player.name}'s hand: {', '.join(map(str, player.hand))}\n")
+    def play_defend(self, player):
+        self.append_output(f"{player.name}'s hand: {', '.join(map(str, player.hand))}\n")
 
         if not isinstance(player, AIPlayer):
             self.append_output("Select a card to defend with.\n")
+            self.root.wait_variable(self.card_options)  # Wait until the player selects a card
+            selected_card = self.card_options.get()
+            if selected_card:
+                if selected_card in player.hand:
+                    self.append_output(f"{player.name} played: {selected_card}\n")
+                    self.game.table_cards.append(selected_card)
+                    self.display_game()  # Update the display
+                else:
+                    self.append_output("The selected card is not in your hand. Please select a card from your hand.\n")
+            else:
+                self.append_output("Please select a card to play.\n")
         else:
-            ai_played_card = player.play_card(self.game)
-            if ai_played_card is not None:
-                self.append_output(f"{player.name} played: {ai_played_card}\n")
-                if self.game.table_cards:
-                    attacking_rank = self.game.table_cards[-1].get_rank_index()
-                else:
-                    attacking_rank = None
-                defending_rank = ai_played_card.get_rank_index()
+            if player.hand:  # Check if the player's hand is not empty
+                ai_played_card = player.play_card(self.game)
+                if ai_played_card is not None:
+                    self.append_output(f"{player.name} played: {ai_played_card}\n")
+                    if self.game.table_cards:
+                        attacking_rank = self.game.table_cards[-1].get_rank_index()
+                    else:
+                        attacking_rank = None
 
-                if attacking_rank is None or (ai_played_card.suit == self.game.table_cards[-1].suit and defending_rank > attacking_rank) \
-                        or (ai_played_card.suit == self.game.trump_suit and self.game.table_cards[-1].suit != self.game.trump_suit):
-                    self.append_output(f"{player.name} successfully defends with {ai_played_card}\n")
-                    self.game.table_cards.append(ai_played_card)
+                    # Filter AI's valid cards based on their ability to defend
+                    valid_defending_cards = [card for card in player.hand if
+                                            (not self.game.table_cards or card.suit == self.game.table_cards[-1].suit)
+                                            and (attacking_rank is None or card.get_rank_index() > attacking_rank)]
+
+                    if valid_defending_cards:
+                        best_defending_card = min(valid_defending_cards, key=lambda card: card.get_rank_index())
+                        self.append_output(f"{player.name} successfully defends with {best_defending_card}\n")
+                        self.game.table_cards.append(best_defending_card)
+                    else:
+                        lowest_card = min(player.hand, key=lambda card: card.get_rank_index())
+                        self.append_output(f"{player.name} couldn't defend. Playing the lowest card: {lowest_card}\n")
+                        self.game.table_cards.append(lowest_card)
                 else:
-                    self.append_output(f"{player.name} could not defend with {ai_played_card}. GAME OVER\n")
+                    self.append_output(f"{player.name} has no valid cards to play. GAME OVER\n")
                     self.game.player.hand.extend(self.game.table_cards)
                     self.game.table_cards.clear()
                     self.game.attacking_player = self.game.player
             else:
-                self.append_output(f"{player.name} has no valid cards to play. GAME OVER\n")
-                self.game.player.hand.extend(self.game.table_cards)
-                self.game.table_cards.clear()
+                self.append_output(f"{player.name}'s hand is empty. GAME OVER\n")
                 self.game.attacking_player = self.game.player
-
 
     def redistribute_cards(self, winning_player):
         losing_player = self.game.player if winning_player == self.game.ai_player else self.game.ai_player
@@ -182,6 +217,7 @@ class Game:
 
         # Set attacking player
         self.attacking_player = self.player if self.player.has_valid_card(self) else self.ai_player
+
 
 if __name__ == "__main__":
     root = tk.Tk()
