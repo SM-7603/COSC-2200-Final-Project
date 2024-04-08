@@ -1,12 +1,5 @@
 # main.py
-from game import Game
-
-def main():
-    print("Welcome to Durak!")
-    game = Game()
-    game.setup_game()
-    game.start_game_loop()
+from frontend.app import run_gui  # Adjust this import based on your actual file structure
 
 if __name__ == "__main__":
-    main()
-
+    run_gui()
