@@ -37,7 +37,7 @@ class Game:
 
 
             # Attacking phase
-            print(f"\nline 39 {self.attacking_player.name} is attacking.")
+            print(f"\n{self.attacking_player.name} is attacking.")
 
 
             if isinstance(self.attacking_player, AIPlayer):
@@ -58,7 +58,7 @@ class Game:
             #this is just a try to make the switching the player work
             # Check if the attacking player is unsuccessful
             if (self.attacking_player == self.player and not self.player.has_valid_card(self)):
-                print("line 59 Human player was unsuccessful in attacking. AI will now attack.")
+                print("Human player was unsuccessful in attacking. AI will now attack.")
                 self.player.hand.extend(self.table_cards)
                 self.table_cards.clear()
                 self.attacking_player = self.ai_player
@@ -67,11 +67,11 @@ class Game:
                 self.redistribute_cards(self.losing_player, self.winning_player)
                 # while len(self.ai_player.hand) < 6 and self.deck.cards:
                 #     self.ai_player.hand.append(self.deck.deal())
-                    # print(f"line 68 worked")
-                print(f"line 67 Number of cards left in the deck: {len(self.deck.cards)}")
+                    # print(f"worked")
+                print(f"Number of cards left in the deck: {len(self.deck.cards)}")
 
             elif (self.attacking_player == self.player and len(self.table_cards) !=0 and not self.table_cards[-1] in [card for card in self.player.hand if self.player.is_valid_card(card, self)] and self.table_cards[-1] in self.player.hand):
-                print("line 72 Human player was unsuccessful in attacking because it does not have valid cards to play. AI will now attack.")
+                print("Human player was unsuccessful in attacking because it does not have valid cards to play. AI will now attack.")
                 self.player.hand.extend(self.table_cards)
                 self.table_cards.clear()
                 self.attacking_player = self.ai_player
@@ -80,11 +80,11 @@ class Game:
                 self.redistribute_cards(self.losing_player, self.winning_player)
                 # while len(self.ai_player.hand) < 6 and self.deck.cards:
                 #     self.ai_player.hand.append(self.deck.deal())
-                    # print(f"line 68 worked")
-                print(f"line 67 Number of cards left in the deck: {len(self.deck.cards)}")
+                    # print(f"worked")
+                print(f"Number of cards left in the deck: {len(self.deck.cards)}")
 
             if self.attacking_player == self.ai_player and not self.ai_player.has_valid_card(self):
-                print("line 71 AI was unsuccessful in attacking. Human player will now attack.")
+                print("AI was unsuccessful in attacking. Human player will now attack.")
                 self.ai_player.hand.extend(self.table_cards)
                 self.table_cards.clear()
                 self.attacking_player = self.player
@@ -93,11 +93,11 @@ class Game:
                 self.redistribute_cards(self.losing_player, self.winning_player)
                 while len(self.player.hand) < 6 and self.deck.cards:
                     self.player.hand.append(self.deck.deal())
-                    print(f"line 81 worked")
-                print(f"line 79 Number of cards left in the deck: {len(self.deck.cards)}")
+                    print(f"worked")
+                print(f"Number of cards left in the deck: {len(self.deck.cards)}")
 
             elif (self.attacking_player == self.ai_player and len(self.table_cards) !=0 and not self.table_cards[-1] in [card for card in self.ai_player.hand if self.ai_player.is_valid_card(card, self)] and self.table_cards[-1] in self.ai_player.hand):
-                print("line 72 AI player was unsuccessful in attacking because it does not have valid cards to play. Human will now attack.")
+                print("AI player was unsuccessful in attacking because it does not have valid cards to play. Human will now attack.")
                 self.player.hand.extend(self.table_cards)
                 self.table_cards.clear()
                 self.attacking_player = self.ai_player
@@ -106,12 +106,12 @@ class Game:
                 self.redistribute_cards(self.losing_player, self.winning_player)
                 # while len(self.ai_player.hand) < 6 and self.deck.cards:
                 #     self.ai_player.hand.append(self.deck.deal())
-                    # print(f"line 68 worked")
-                print(f"line 67 Number of cards left in the deck: {len(self.deck.cards)}")
+                    # print(f"worked")
+                print(f"Number of cards left in the deck: {len(self.deck.cards)}")
 
             
             if self.defending_player == self.player and not self.player.has_valid_card(self):
-                print("line 82 Human player was unsuccessful in defending. AI will now attack.")
+                print("Human player was unsuccessful in defending. AI will now attack.")
                 self.player.hand.extend(self.table_cards)
                 self.table_cards.clear()
                 self.attacking_player = self.ai_player
@@ -119,10 +119,10 @@ class Game:
                 self.losing_player = self.player
                 while len(self.winning_player.hand) < 6 and self.deck.cards:
                     self.winning_player.hand.append(self.deck.deal())
-                print(f"line 90 Number of cards left in the deck: {len(self.deck.cards)}")
+                print(f"Number of cards left in the deck: {len(self.deck.cards)}")
 
             elif (self.defending_player == self.player and len(self.table_cards) !=0 and not self.table_cards[-1] in [card for card in self.player.hand if self.player.is_valid_card(card, self)] and self.table_cards[-1] in self.player.hand):
-                print("line 72 Human player was unsuccessful in defending because it does not have valid cards to play. AI will continue now attack.")
+                print("Human player was unsuccessful in defending because it does not have valid cards to play. AI will continue now attack.")
                 self.player.hand.extend(self.table_cards)
                 self.table_cards.clear()
                 self.attacking_player = self.ai_player
@@ -131,12 +131,12 @@ class Game:
                 self.redistribute_cards(self.losing_player, self.winning_player)
                 # while len(self.ai_player.hand) < 6 and self.deck.cards:
                 #     self.ai_player.hand.append(self.deck.deal())
-                    # print(f"line 68 worked")
-                print(f"line 67 Number of cards left in the deck: {len(self.deck.cards)}")
+                    # print(f"worked")
+                print(f"Number of cards left in the deck: {len(self.deck.cards)}")
 
             
             elif self.defending_player == self.ai_player and not self.ai_player.has_valid_card(self):
-                print("line 94 AI was unsuccessful in defending. Human player will now attack.")
+                print("AI was unsuccessful in defending. Human player will now attack.")
                 self.player.hand.extend(self.table_cards)
                 self.table_cards.clear()
                 self.attacking_player = self.player
@@ -144,18 +144,18 @@ class Game:
                 self.losing_player = self.ai_player
                 while len(self.winning_player.hand) < 6 and self.deck.cards:
                     self.winning_player.hand.append(self.deck.deal())
-                print(f"line 102 Number of cards left in the deck: {len(self.deck.cards)}")
+                print(f" Number of cards left in the deck: {len(self.deck.cards)}")
 
         print("\nGame Over!")
 
     def attack(self, player,):
         self.attacking_player = self.player
-        print(f"\n line 108 Your hand: {', '.join(map(str, self.player.hand))}")
-        print(f"line 109 AI hand: {', '.join(map(str, self.ai_player.hand))}")
+        print(f"\nYour hand: {', '.join(map(str, self.player.hand))}")
+        print(f" AI hand: {', '.join(map(str, self.ai_player.hand))}")
         while True:
-            card_index = int(input("line 111 Enter the index of the card you wish to play (0-based): "))
+            card_index = int(input("Enter the index of the card you wish to play (0-based): "))
             if card_index >= len(player.hand):
-                print("line 113 Invalid card index. Try again.")
+                print(" Invalid card index. Try again.")
                 continue
             
             # Player plays the selected card
@@ -173,14 +173,14 @@ class Game:
                     print(f"{player.name} played: {played_card}")
                     self.table_cards.append(played_card)
                     # Print the number of cards on the table and in the deck after a card is played
-                    print(f"line 133 Number of cards on the table: {len(self.table_cards)}")
+                    print(f"Number of cards on the table: {len(self.table_cards)}")
                     print(f"Number of cards left in the deck: {len(self.deck.cards)}")
                     break
                 
                 else:
                     self.table_cards.append(played_card)
                     # if (self.attacking_player == self.player and self.table_cards !=0 and not self.table_cards[-1] in self.player.has_valid_card(self)):
-                    #     print("line 72 Human player was unsuccessful in attacking. AI will now attack.")
+                    #     print("Human player was unsuccessful in attacking. AI will now attack.")
                     #     self.player.hand.extend(self.table_cards)
                     #     self.table_cards.clear()
                     #     self.attacking_player = self.ai_player
@@ -189,7 +189,7 @@ class Game:
                     #     self.redistribute_cards(self.losing_player, self.winning_player)
                     break
                 # # Attack unsuccessful
-                #     print(f"line 138 {player.name} could not attack successfully. Round Over.")
+                #     print(f" {player.name} could not attack successfully. Round Over.")
                 #     print(f"Number of cards on the table before taking: {len(self.table_cards)}")
                 #     player.hand.append(self.table_cards)
                 #     player.hand.extend(self.table_cards)
@@ -211,7 +211,7 @@ class Game:
                 print(f"{player.name} played: {played_card}")
                 self.table_cards.append(played_card)
                 # Print the number of cards on the table and in the deck after a card is played
-                print(f"line 157Number of cards on the table: {len(self.table_cards)}")
+                print(f"Number of cards on the table: {len(self.table_cards)}")
                 print(f"Number of cards left in the deck: {len(self.deck.cards)}")
                 break            
 
@@ -222,11 +222,11 @@ class Game:
         if played_card:
             print(f"{player.name} played: {played_card}")
             self.table_cards.append(played_card)
-            print(f"line 168 Number of cards on the table: {len(self.table_cards)}")
+            print(f"Number of cards on the table: {len(self.table_cards)}")
 
         else:
             # self.table_cards.append(played_card)
-            # print("line 171 AI couldn't play a card. Round Over")
+            # print(" AI couldn't play a card. Round Over")
             # player.hand.extend(self.table_cards)
             # self.table_cards.clear()
             # print(f"Number of cards on the table after taking: {len(self.table_cards)}")
@@ -242,9 +242,9 @@ class Game:
         while True:
             if player == self.player:
                 print(f"Your hand: {', '.join(map(str, self.player.hand))}")
-                card_index = int(input("line 194 Enter the index of the card you wish to play (0-based): "))
+                card_index = int(input("Enter the index of the card you wish to play (0-based): "))
                 if card_index >= len(player.hand):
-                    print("line 196 Invalid card index. Try again.")
+                    print(" Invalid card index. Try again.")
                     continue
                 played_card = player.play_card(card_index)
                 print(f"{player.name} played: {played_card}")
@@ -258,7 +258,7 @@ class Game:
                 # Check if defending card successfully defends
                 if (played_card.suit == self.table_cards[-1].suit and defending_rank > attacking_rank) \
                         or (played_card.suit == self.trump_suit and self.table_cards[-1].suit != self.trump_suit) or (played_card.suit == self.trump_suit and self.table_cards[-1].suit == self.trump_suit and defending_rank > attacking_rank):
-                    print(f"line 210 {player.name} successfully defends with {played_card}.")
+                    print(f" {player.name} successfully defends with {played_card}.")
                     self.table_cards.append(played_card) # append the played card to the table card list
                     # Print the number of cards on the table
                     print(f"Number of cards on the table: {len(self.table_cards)}")
@@ -266,7 +266,7 @@ class Game:
                 else:
                     self.table_cards.append(played_card)
                     print(f"{player.name} could not defend with {played_card}. Round Over.")
-                    print(f"line 218 Number of cards on the table before taking: {len(self.table_cards)}")
+                    print(f"Number of cards on the table before taking: {len(self.table_cards)}")
                     player.hand.extend(self.table_cards)
                     self.table_cards.clear()
                     print(f"Number of cards on the table after taking: {len(self.table_cards)}")
@@ -281,7 +281,7 @@ class Game:
 
             else:
                 print(f"{player.name} has no valid cards to play. Round Over")
-                print(f"line 233 Number of cards on the table before taking: {len(self.table_cards)}")
+                print(f"Number of cards on the table before taking: {len(self.table_cards)}")
                 player.hand.extend(self.table_cards)
                 self.table_cards.clear()
                 print(f"Number of cards on the table after taking: {len(self.table_cards)}")
@@ -303,12 +303,12 @@ class Game:
             # Check if defending card successfully defends
             if (ai_played_card.suit == self.table_cards[-1].suit and defending_rank > attacking_rank) \
                     or (ai_played_card.suit == self.trump_suit and self.table_cards[-1].suit != self.trump_suit):
-                print(f"line 254 {player.name} successfully defends with {ai_played_card}.")
+                print(f" {player.name} successfully defends with {ai_played_card}.")
                 self.table_cards.append(ai_played_card) # append the ai played card to the table card list
                 # Print the number of cards on the table
                 print(f"Number of cards on the table: {len(self.table_cards)}")
             else:
-                print(f"line 259 {player.name} could not defend with {ai_played_card}. Round Over")
+                print(f" {player.name} could not defend with {ai_played_card}. Round Over")
                 print(f"Number of cards on the table before taking: {len(self.table_cards)}")
                 player.hand.extend(self.table_cards)
                 self.table_cards.clear()
@@ -319,7 +319,7 @@ class Game:
                 self.redistribute_cards(self.losing_player, self.winning_player)
             
         else:
-            print(f"line 270 {player.name} has no valid cards to play. Round Over")
+            print(f" {player.name} has no valid cards to play. Round Over")
             print(f"Number of cards on the table before taking: {len(self.table_cards)}")
             player.hand.extend(self.table_cards)
             self.table_cards.clear()
@@ -337,7 +337,7 @@ class Game:
         while len(winning_player.hand) < 6 and self.deck.cards:
             winning_player.hand.append(self.deck.deal())
 
-        print(f"line 288 After redistribution, {winning_player.name} has {len(winning_player.hand)} cards.")
+        print(f" After redistribution, {winning_player.name} has {len(winning_player.hand)} cards.")
         print(f"After redistribution, {losing_player.name} has {len(losing_player.hand)} cards.")
         print(f"Number of cards left in the deck: {len(self.deck.cards)}")
 
