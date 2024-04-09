@@ -1,0 +1,52 @@
+```md
+Welcome to Durak!
+The trump suit is Clubs
+Number of cards left in the deck: 24
+
+New round!
+
+AI is attacking.
+
+AI is attacking.
+AI Valid cards before filtering: [King of Diamonds, 7 of Clubs, 10 of Hearts, 9 of Hearts, King of Spades, Ace of Spades]
+AI Valid cards after filtering played ones: [King of Diamonds, 7 of Clubs, 10 of Hearts, 9 of Hearts, King of Spades, Ace of Spades]      
+AI selects 7 of Clubs because it's the first turn, playing highest trump card.
+AI played: 7 of Clubs
+Number of cards on the table: 1
+
+Human is defending.
+Your hand: 10 of Clubs, 8 of Hearts, 9 of Spades, Ace of Clubs, 10 of Diamonds, 6 of Hearts
+Enter the index of the card you wish to play (0-based): 0
+Human played: 10 of Clubs
+Human successfully defends with 10 of Clubs.
+Number of cards on the table: 2
+
+New round!
+
+AI is attacking.
+
+AI is attacking.
+AI Valid cards before filtering: []
+No valid cards to play.
+AI couldn't play a card. GAME OVER
+Number of cards on the table after taking: 0
+Number of cards in AI's hand after taking cards: 7
+After redistribution, Human has 6 cards.
+After redistribution, AI has 7 cards.
+
+Human is defending.
+Your hand: 8 of Hearts, 9 of Spades, Ace of Clubs, 10 of Diamonds, 6 of Hearts, 9 of Clubs
+Enter the index of the card you wish to play (0-based): -1
+Human played: 9 of Clubs
+Traceback (most recent call last):
+  File "d:\semester_04\cosc2200\repos\COSC-2200-Final-Project\main.py", line 11, in <module>
+    main()
+  File "d:\semester_04\cosc2200\repos\COSC-2200-Final-Project\main.py", line 8, in main
+    game.start_game_loop()
+  File "d:\semester_04\cosc2200\repos\COSC-2200-Final-Project\game.py", line 47, in start_game_loop
+    self.defend(defending_player)
+  File "d:\semester_04\cosc2200\repos\COSC-2200-Final-Project\game.py", line 111, in defend
+    attacking_rank = self.table_cards[-1].get_rank_index()
+                     ~~~~~~~~~~~~~~~~^^^^
+IndexError: list index out of range
+```

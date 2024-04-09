@@ -11,4 +11,7 @@ class Deck:
         random.shuffle(self.cards)
 
     def deal(self):
-        return self.cards.pop() if self.cards else None
+        if self.cards:
+            return self.cards.pop()
+        else:
+            return None

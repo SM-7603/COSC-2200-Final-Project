@@ -1,3 +1,4 @@
+# player.py
 class Player:
     def __init__(self, name):
         self.name = name
@@ -8,11 +9,14 @@ class Player:
         card = deck.deal()
         if card:
             self.hand.append(card)
+        # For GUI, we would update the hand display here if needed
 
     def play_card(self, index):
-        # Play a card from the player's hand at the specified index
-        return self.hand.pop(index) if index < len(self.hand) else None
-    
+        # No need for input, index is provided by GUI
+        if 0 <= index < len(self.hand):
+            return self.hand.pop(index)
+        return None  # GUI should handle invalid index
+        
     def has_valid_card(self, game_state):
         # Check if the player has any valid cards to play
         if game_state.table_cards:
@@ -23,6 +27,12 @@ class Player:
             return False
         else:
             return True
+
+    def can_play(self, card):
+        # For GUI: Determine if the player can play the specified card
+        return card in self.hand
+    
+    # Additional GUI-based methods would go here
 
 class AIPlayer(Player):
     def __init__(self):
