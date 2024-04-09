@@ -15,12 +15,13 @@ class Game:
         self.defending_player = None
 
     def setup_game(self):
+        # Shuffle the deck and deal 6 cards to each player
         self.deck.shuffle()
-        # Deal 6 cards to each player
         for _ in range(6):
-            self.player.draw_card(self.deck)
-            self.ai_player.draw_card(self.deck)
-        # Determine the trump suit
+            self.player.draw_card(self.deck)        # Human player draws a card
+            self.ai_player.draw_card(self.deck)     # AI player draws a card
+        
+        # Determine the trump suit by taking the suit of the last card in the deck
         self.trump_suit = self.deck.cards[-1].suit
         print(f"The trump suit is {self.trump_suit}")
         # Print the number of cards left in the deck
@@ -156,6 +157,8 @@ class Game:
             if card_index >= len(player.hand):
                 print("line 113 Invalid card index. Try again.")
                 continue
+            
+            # Player plays the selected card
             played_card = player.play_card(card_index)
             
             if(len(self.table_cards) != 0):
@@ -234,6 +237,7 @@ class Game:
             played_card = random(self.ai_player.hand)
             self.table_cards.append(played_card)
     def defend(self, player):
+        # Display the defending player and let them play a card to defend
         print(f"\n{player.name} is defending.")
         while True:
             if player == self.player:
@@ -290,6 +294,7 @@ class Game:
     def ai_defend(self, player):
         print(f"\nAI is defending.")
         ai_played_card = player.play_card(self)
+        
         if ai_played_card is not None:
             print(f"{player.name} played: {ai_played_card}")
             defending_rank = ai_played_card.get_rank_index()
@@ -353,6 +358,7 @@ class Game:
    
 
 if __name__ == "__main__":
+    # Create a game object and start the game
     game = Game()
     game.setup_game()
     game.start_game_loop()
