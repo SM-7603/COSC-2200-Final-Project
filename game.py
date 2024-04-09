@@ -3,17 +3,20 @@ from deck import Deck
 from player import AIPlayer, Player
 
 class Game:
-    def __init__(self):
+    def __init__(self, app=None):
         self.deck = Deck()
         self.player = Player("Human")
         self.ai_player = AIPlayer()
         self.trump_suit = None
         self.table_cards = []
+        self.current_attacker = None
         self.winning_player = None
         self.losing_player = None
+        self.app = app  # Store the DurakApp instance
 
     def setup_game(self):
         self.deck.shuffle()
+        self.current_attacker = self.player  # Let's assume the human player starts as the attacker
         # Deal 6 cards to each player
         for _ in range(6):
             self.player.draw_card(self.deck)
@@ -23,6 +26,76 @@ class Game:
         print(f"The trump suit is {self.trump_suit}")
         # Print the number of cards left in the deck
         print(f"Number of cards left in the deck: {len(self.deck.cards)}")
+
+    # This is a placeholder method and should be updated based on actual logic and variables names
+    def end_round(self):
+        # Determine if the attacker won the round
+        attacker_won = self.game.did_attacker_win()
+
+        if attacker_won:
+            # Attacker wins the round
+            self.append_output("Attacker wins the round!")
+            losing_player = self.game.current_defender
+            winning_player = self.game.current_attacker
+        else:
+            # Defender wins the round
+            self.append_output("Defender wins the round!")
+            losing_player = self.game.current_attacker
+            winning_player = self.game.current_defender
+
+        # Call the redistribute method
+        self.game.redistribute_cards(losing_player, winning_player)
+
+        # Prepare for new round
+        self.prepare_for_new_round()
+        
+    def prepare_for_new_round(self):
+        # Clear table cards and other round-specific state
+        self.game.table_cards.clear()
+
+        # Switch roles if defender won
+        if self.game.current_defender and not self.game.did_attacker_win():
+            self.game.current_attacker, self.game.current_defender = self.game.current_defender, self.game.current_attacker
+
+        # Update the GUI for the new round
+        self.update_game_state()
+
+    def update_game_state(self):
+        # Update the GUI with the current game state
+        self.update_card_options()  # Update the cards displayed to the player
+        # Update other elements like who is attacking/defending, etc.
+        if self.game.current_attacker == self.game.player:
+            self.append_output("You are attacking.")
+        else:
+            self.append_output("You are defending.")
+
+
+    def did_attacker_win(self):
+        # If there are an odd number of cards, it means the last attack was not defended.
+        if len(self.table_cards) % 2 != 0:
+            return True  # Attacker wins because the last card was not defended
+        
+        # Check if all attack cards were beaten by defend cards
+        for attack_card, defend_card in self.table_cards:
+            if not self.is_defend_successful(attack_card, defend_card):
+                return True  # Attacker wins because at least one card was not successfully defended
+        
+        return False  # Defender won because they beat all attacks
+
+    def is_defend_successful(self, attack_card, defend_card):
+        # Assuming Card class has suit and rank attributes
+        if defend_card.suit == attack_card.suit and defend_card.rank > attack_card.rank:
+            return True  # Same suit and higher rank beats the attack card
+        elif defend_card.suit == self.trump_suit and attack_card.suit != self.trump_suit:
+            return True  # A trump suit beats any non-trump suit
+        return False  # Defense was not successful
+
+
+    def start_game(self):
+        self.game = Game()  # Initialize the game
+        self.game.setup_game()  # Set up the game (shuffle, deal cards, determine trump)
+        self.display_game()  # Update the GUI based on the initial game state
+
 
     def start_game_loop(self):
         attacking_player = random.choice([self.player, self.ai_player])
@@ -59,138 +132,67 @@ class Game:
 
         print("\nGame over!")
 
-    def attack(self, player,):
-        print(f"\nYour hand: {', '.join(map(str, self.player.hand))}")
-        
-        # There should not be card showing to 
-        print(f"AI hand: {', '.join(map(str, self.ai_player.hand))}")
+    def attack(self, player, card):
+        if card in player.hand:
+            player.hand.remove(card)  # Remove the card from the player's hand
+            self.table_cards.append(card)  # Add the card to the table
+            print(f"{player.name} played: {card}")
+            # Additional game state updates go here, if any
+        else:
+            print(f"Card {card} is not in {player.name}'s hand.")
 
-        while True:
-            card_index = int(input("Enter the index of the card you wish to play (0-based): "))
-            if card_index >= len(player.hand):
-                print("Invalid card index. Try again.")
-                continue
-            played_card = player.play_card(card_index)
-            print(f"{player.name} played: {played_card}")
-            self.table_cards.append(played_card)
-            # Print the number of cards on the table and in the deck after a card is played
-            print(f"Number of cards on the table: {len(self.table_cards)}")
-            print(f"Number of cards left in the deck: {len(self.deck.cards)}")
-            break
-
-    def ai_attack(self, player):
-        print(f"\nAI is attacking.")
-        played_card = player.play_card(self)
+    def ai_attack(self):
+        played_card = self.ai_player.play_card()
         if played_card:
-            print(f"{player.name} played: {played_card}")
-            self.table_cards.append(played_card)
-            print(f"Number of cards on the table: {len(self.table_cards)}")
+            self.table_cards.append(played_card)  # Add the card to the table
+            print(f"{self.ai_player.name} played: {played_card}")
+            # Additional game state updates go here, if any
         else:
             print("AI couldn't play a card. GAME OVER")
-            player.hand.extend(self.table_cards)
-            self.table_cards.clear()
-            print(f"Number of cards on the table after taking: {len(self.table_cards)}")
-            print(f"Number of cards in {player.name}'s hand after taking cards: {len(player.hand)}")
-            self.winning_player = self.player
-            self.losing_player = self.ai_player
-            self.redistribute_cards(self.losing_player, self.winning_player)
+            # Handle game over condition here...
             
-    def defend(self, player):
-        print(f"\n{player.name} is defending.")
-        while True:
-            if player == self.player:
-                print(f"Your hand: {', '.join(map(str, self.player.hand))}")
-                card_index = int(input("Enter the index of the card you wish to play (0-based): "))
-                if card_index >= len(player.hand):
-                    print("Invalid card index. Try again.")
-                    continue
-                played_card = player.play_card(card_index)
-                print(f"{player.name} played: {played_card}")
-            else:
-                played_card = player.play_card(self)
-                print(f"{player.name} played: {played_card}")
-            if played_card is not None:
-                defending_rank = played_card.get_rank_index()
-                attacking_rank = self.table_cards[-1].get_rank_index()
 
-                # Check if defending card successfully defends
-                if (played_card.suit == self.table_cards[-1].suit and defending_rank > attacking_rank) \
-                        or (played_card.suit == self.trump_suit and self.table_cards[-1].suit != self.trump_suit and defending_rank > attacking_rank):
-                    print(f"{player.name} successfully defends with {played_card}.")
-                    self.table_cards.append(played_card) # append the played card to the table card list
-                    # Print the number of cards on the table
-                    print(f"Number of cards on the table: {len(self.table_cards)}")
-                    break
-                else:
-                    self.table_cards.append(played_card)
-                    print(f"{player.name} could not defend with {played_card}. GAME OVER.")
-                    print(f"Number of cards on the table before taking: {len(self.table_cards)}")
-                    player.hand.extend(self.table_cards)
-                    self.table_cards.clear()
-                    print(f"Number of cards on the table after taking: {len(self.table_cards)}")
-                    print(f"Number of cards in {player.name}'s hand after taking cards: {len(player.hand)}")
-                    self.winning_player = self.ai_player
-                    self.losing_player = self.player
-                    self.redistribute_cards(self.losing_player, self.winning_player)
-                    break
-            else:
-                print(f"{player.name} has no valid cards to play. GAME OVER")
-                print(f"Number of cards on the table before taking: {len(self.table_cards)}")
-                player.hand.extend(self.table_cards)
-                self.table_cards.clear()
-                print(f"Number of cards on the table after taking: {len(self.table_cards)}")
-                print(f"Number of cards in {player.name}'s hand after taking cards: {len(player.hand)}")
-                self.winning_player = self.ai_player
-                self.losing_player = self.player
-                self.redistribute_cards(self.losing_player, self.winning_player)
-                break
-
-    def ai_defend(self, player):
-        print(f"\nAI is defending.")
-        ai_played_card = player.play_card(self)
-        if ai_played_card is not None:
-            print(f"{player.name} played: {ai_played_card}")
-            defending_rank = ai_played_card.get_rank_index()
-            attacking_rank = self.table_cards[-1].get_rank_index()
-
-            # Check if defending card successfully defends
-            if (ai_played_card.suit == self.table_cards[-1].suit and defending_rank > attacking_rank) \
-                    or (ai_played_card.suit == self.trump_suit and self.table_cards[-1].suit != self.trump_suit):
-                print(f"{player.name} successfully defends with {ai_played_card}.")
-                self.table_cards.append(ai_played_card) # append the ai played card to the table card list
-                # Print the number of cards on the table
-                print(f"Number of cards on the table: {len(self.table_cards)}")
-            else:
-                print(f"{player.name} could not defend with {ai_played_card}. GAME OVER")
-                print(f"Number of cards on the table before taking: {len(self.table_cards)}")
-                player.hand.extend(self.table_cards)
-                self.table_cards.clear()
-                print(f"Number of cards on the table after taking: {len(self.table_cards)}")
-                print(f"Number of cards in {player.name}'s hand after taking cards: {len(player.hand)}")
-                self.winning_player = self.player
-                self.losing_player = self.ai_player
-                self.redistribute_cards(self.losing_player, self.winning_player)
+    def defend(self, defending_player, attacking_card, defending_card):
+        if defending_player.can_defend_with(attacking_card, defending_card):
+            self.table_cards.append(defending_card)
+            defending_player.hand.remove(defending_card)
+            # Proceed with game logic after a successful defense
         else:
-            print(f"{player.name} has no valid cards to play. GAME OVER")
-            print(f"Number of cards on the table before taking: {len(self.table_cards)}")
-            player.hand.extend(self.table_cards)
+            # The defense was unsuccessful, handle the case where the player has to take the cards
+            defending_player.take_cards(self.table_cards)
             self.table_cards.clear()
-            print(f"Number of cards on the table after taking: {len(self.table_cards)}")
-            print(f"Number of cards in {player.name}'s hand after taking cards: {len(player.hand)}")
-            self.winning_player = self.player
-            self.losing_player = self.ai_player
-            self.redistribute_cards(self.losing_player, self.winning_player)
-            
+            # Update players for the next turn
+            self.switch_players()
 
-    def redistribute_cards(self, losing_player, winning_player):
-        # TO DO make winning and losing player redistribution and extends of the table card in this function.
+    def ai_defend(self):
+        # AI should select the best card to defend with
+        attacking_card = self.table_cards[-1]  # The last played card which AI has to defend against
+        defending_card = self.ai_player.select_card_to_defend(attacking_card)
 
+        if defending_card:
+            self.table_cards.append(defending_card)
+            self.ai_player.hand.remove(defending_card)
+            # AI successfully defended, proceed with the game logic
+        else:
+            # AI couldn't defend and takes the cards
+            self.ai_player.take_cards(self.table_cards)
+            self.table_cards.clear()
+            # Update players for the next turn
+            self.switch_players()
 
-        while len(winning_player.hand) < 6 and self.deck.cards:
-            winning_player.hand.append(self.deck.deal())
+    def redistribute_cards(self, winner):
+        # Check who the winner is to determine the order of card distribution.
+        if winner == self.player:
+            order = [self.player, self.ai_player]
+        else:
+            order = [self.ai_player, self.player]
+        
+        for player in order:
+            while len(player.hand) < 6 and self.deck.cards:
+                player.hand.append(self.deck.deal())
 
-        print(f"After redistribution, {winning_player.name} has {len(winning_player.hand)} cards.")
-        print(f"After redistribution, {losing_player.name} has {len(losing_player.hand)} cards.")
+        # Make sure to update the GUI if there's a change in the hands
+        self.app.update_game_state()
 
 if __name__ == "__main__":
     game = Game()

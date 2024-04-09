@@ -8,10 +8,31 @@ class Player:
         card = deck.deal()
         if card:
             self.hand.append(card)
+            
+    def get_valid_card_choices(self):
+        # Return a list of strings representing valid card choices
+        return [str(card) for card in self.hand]
 
-    def play_card(self, index):
-        # Play a card from the player's hand at the specified index
-        return self.hand.pop(index) if index < len(self.hand) else None
+    def play_card_by_choice(self, card_choice):
+        # Adapted play_card method to accept a card choice directly
+        for card in self.hand:
+            if str(card) == card_choice:
+                self.hand.remove(card)
+                return card
+        return None
+
+
+    def play_card(self, card):
+        # Debugging: print out the hand before attempting to play the card
+        print(f"Attempting to play {card}. Current hand: {[str(c) for c in self.hand]}")
+        if card in self.hand:
+            self.hand.remove(card)
+            # Debugging: print out the hand after attempting to play the card
+            print(f"Played {card}. New hand: {[str(c) for c in self.hand]}")
+            return card
+        else:
+            print(f"Cannot play {card} as it is not in the hand.")
+            return None
     
     def has_valid_card(self, game_state):
         # Check if the player has any valid cards to play
