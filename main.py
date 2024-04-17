@@ -2,6 +2,7 @@
 from game import Game
 
 def main():
+    print("===========================================================")
     print("Welcome to Durak!")
     game = Game()
     game.setup_game()
