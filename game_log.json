@@ -1,0 +1,2406 @@
+[
+    {
+        "timestamp": "2024-04-09T03:06:58.530504",
+        "event": "Game Initialized",
+        "details": {
+            "message": "A new game of Durak has started."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:06:58.530504",
+        "event": "Card Drawn",
+        "details": {
+            "player": "Human",
+            "card": "10 of Spades"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:06:58.530504",
+        "event": "Card Drawn",
+        "details": {
+            "player": "AI",
+            "card": "8 of Clubs"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:06:58.547128",
+        "event": "Card Drawn",
+        "details": {
+            "player": "Human",
+            "card": "9 of Clubs"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:06:58.547128",
+        "event": "Card Drawn",
+        "details": {
+            "player": "AI",
+            "card": "Ace of Spades"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:06:58.563636",
+        "event": "Card Drawn",
+        "details": {
+            "player": "Human",
+            "card": "Ace of Clubs"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:06:58.563636",
+        "event": "Card Drawn",
+        "details": {
+            "player": "AI",
+            "card": "6 of Diamonds"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:06:58.575679",
+        "event": "Card Drawn",
+        "details": {
+            "player": "Human",
+            "card": "Jack of Diamonds"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:06:58.580326",
+        "event": "Card Drawn",
+        "details": {
+            "player": "AI",
+            "card": "7 of Diamonds"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:06:58.580326",
+        "event": "Card Drawn",
+        "details": {
+            "player": "Human",
+            "card": "10 of Diamonds"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:06:58.597044",
+        "event": "Card Drawn",
+        "details": {
+            "player": "AI",
+            "card": "10 of Clubs"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:06:58.597044",
+        "event": "Card Drawn",
+        "details": {
+            "player": "Human",
+            "card": "7 of Spades"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:06:58.597044",
+        "event": "Card Drawn",
+        "details": {
+            "player": "AI",
+            "card": "8 of Hearts"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:06:58.613541",
+        "event": "Game Setup",
+        "details": {
+            "trump_suit": "Diamonds",
+            "deck_size": 24,
+            "message": "Deck shuffled, cards dealt, and trump suit determined."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:06:58.613541",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "Human",
+            "message": "Human is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:48.103386",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "10 of Spades",
+            "remaining_cards": 5
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:48.105173",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "10 of Spades",
+            "table_cards": [
+                "10 of Spades"
+            ],
+            "message": "Human played: 10 of Spades"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:48.122621",
+        "event": "AI Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Ace of Spades",
+            "remaining_cards": 5
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:48.133666",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Ace of Spades",
+            "table_cards": [
+                "10 of Spades",
+                "Ace of Spades"
+            ],
+            "message": "AI played: Ace of Spades"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:48.133666",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "AI",
+            "message": "AI is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:48.148048",
+        "event": "Play Failed",
+        "details": {
+            "player": "AI",
+            "message": "AI couldn't play a valid card. Round Over."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:48.440772",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "9 of Clubs",
+            "remaining_cards": 6
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:48.461807",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "9 of Clubs",
+            "table_cards": [
+                "9 of Clubs"
+            ],
+            "message": "Human played: 9 of Clubs"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:48.465619",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "AI",
+            "message": "AI is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:48.481891",
+        "event": "AI Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Queen of Diamonds",
+            "remaining_cards": 5
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:48.481891",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Queen of Diamonds",
+            "table_cards": [
+                "9 of Clubs",
+                "Queen of Diamonds"
+            ],
+            "message": "AI played: Queen of Diamonds"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:48.772545",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "Ace of Clubs",
+            "remaining_cards": 5
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:48.776743",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "Ace of Clubs",
+            "table_cards": [
+                "9 of Clubs",
+                "Queen of Diamonds",
+                "Ace of Clubs"
+            ],
+            "message": "Human played: Ace of Clubs"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:48.799542",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "Human",
+            "message": "Human is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:49.094868",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "Jack of Diamonds",
+            "remaining_cards": 4
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:49.103258",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "Jack of Diamonds",
+            "table_cards": [
+                "9 of Clubs",
+                "Queen of Diamonds",
+                "Ace of Clubs",
+                "Jack of Diamonds"
+            ],
+            "message": "Human played: Jack of Diamonds"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:49.112997",
+        "event": "AI Play Attempt",
+        "details": {
+            "player": "AI",
+            "outcome": "No valid cards"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:49.114169",
+        "event": "Play Failed",
+        "details": {
+            "player": "AI",
+            "message": "AI couldn't play a valid card. Round Over."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:49.135992",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "Human",
+            "message": "Human is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:49.377450",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "10 of Diamonds",
+            "remaining_cards": 5
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:49.389498",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "10 of Diamonds",
+            "table_cards": [
+                "10 of Diamonds"
+            ],
+            "message": "Human played: 10 of Diamonds"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:49.399030",
+        "event": "AI Card Played",
+        "details": {
+            "player": "AI",
+            "card": "6 of Diamonds",
+            "remaining_cards": 8
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:49.399030",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "6 of Diamonds",
+            "table_cards": [
+                "10 of Diamonds",
+                "6 of Diamonds"
+            ],
+            "message": "AI played: 6 of Diamonds"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:49.420314",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "AI",
+            "message": "AI is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:49.426619",
+        "event": "AI Card Played",
+        "details": {
+            "player": "AI",
+            "card": "7 of Diamonds",
+            "remaining_cards": 7
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:49.431092",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "7 of Diamonds",
+            "table_cards": [
+                "10 of Diamonds",
+                "6 of Diamonds",
+                "7 of Diamonds"
+            ],
+            "message": "AI played: 7 of Diamonds"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:49.662395",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "7 of Spades",
+            "remaining_cards": 4
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:49.670460",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "7 of Spades",
+            "table_cards": [
+                "10 of Diamonds",
+                "6 of Diamonds",
+                "7 of Diamonds",
+                "7 of Spades"
+            ],
+            "message": "Human played: 7 of Spades"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:49.678237",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "AI",
+            "message": "AI is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:49.687637",
+        "event": "AI Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Jack of Diamonds",
+            "remaining_cards": 6
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:49.693418",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Jack of Diamonds",
+            "table_cards": [
+                "10 of Diamonds",
+                "6 of Diamonds",
+                "7 of Diamonds",
+                "7 of Spades",
+                "Jack of Diamonds"
+            ],
+            "message": "AI played: Jack of Diamonds"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:49.926548",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "10 of Spades",
+            "remaining_cards": 3
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:49.941083",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "10 of Spades",
+            "table_cards": [
+                "10 of Diamonds",
+                "6 of Diamonds",
+                "7 of Diamonds",
+                "7 of Spades",
+                "Jack of Diamonds",
+                "10 of Spades"
+            ],
+            "message": "Human played: 10 of Spades"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:49.953784",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "AI",
+            "message": "AI is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:49.966059",
+        "event": "AI Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Queen of Diamonds",
+            "remaining_cards": 5
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:49.970202",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Queen of Diamonds",
+            "table_cards": [
+                "10 of Diamonds",
+                "6 of Diamonds",
+                "7 of Diamonds",
+                "7 of Spades",
+                "Jack of Diamonds",
+                "10 of Spades",
+                "Queen of Diamonds"
+            ],
+            "message": "AI played: Queen of Diamonds"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:50.226458",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "Ace of Spades",
+            "remaining_cards": 2
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:50.248013",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "Ace of Spades",
+            "table_cards": [
+                "10 of Diamonds",
+                "6 of Diamonds",
+                "7 of Diamonds",
+                "7 of Spades",
+                "Jack of Diamonds",
+                "10 of Spades",
+                "Queen of Diamonds",
+                "Ace of Spades"
+            ],
+            "message": "Human played: Ace of Spades"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:50.255002",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "Human",
+            "message": "Human is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:50.516323",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "Jack of Spades",
+            "remaining_cards": 1
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:50.523258",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "Jack of Spades",
+            "table_cards": [
+                "10 of Diamonds",
+                "6 of Diamonds",
+                "7 of Diamonds",
+                "7 of Spades",
+                "Jack of Diamonds",
+                "10 of Spades",
+                "Queen of Diamonds",
+                "Ace of Spades",
+                "Jack of Spades"
+            ],
+            "message": "Human played: Jack of Spades"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:50.530718",
+        "event": "AI Play Attempt",
+        "details": {
+            "player": "AI",
+            "outcome": "No valid cards"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:50.530718",
+        "event": "Play Failed",
+        "details": {
+            "player": "AI",
+            "message": "AI couldn't play a valid card. Round Over."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:50.551776",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "Human",
+            "message": "Human is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:51.079154",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "Queen of Hearts",
+            "remaining_cards": 5
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:51.094137",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "Queen of Hearts",
+            "table_cards": [
+                "Queen of Hearts"
+            ],
+            "message": "Human played: Queen of Hearts"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:51.115264",
+        "event": "Play Failed",
+        "details": {
+            "player": "AI",
+            "message": "AI couldn't play a valid card. Round Over."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:51.125021",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "AI",
+            "message": "AI is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:51.136859",
+        "event": "AI Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Queen of Diamonds",
+            "remaining_cards": 14
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:51.143318",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Queen of Diamonds",
+            "table_cards": [
+                "Queen of Diamonds"
+            ],
+            "message": "AI played: Queen of Diamonds"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:51.399446",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "9 of Hearts",
+            "remaining_cards": 5
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:51.409419",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "9 of Hearts",
+            "table_cards": [
+                "Queen of Diamonds",
+                "9 of Hearts"
+            ],
+            "message": "Human played: 9 of Hearts"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:51.414327",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "Human",
+            "message": "Human is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:51.658262",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "6 of Spades",
+            "remaining_cards": 4
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:51.658262",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "6 of Spades",
+            "table_cards": [
+                "Queen of Diamonds",
+                "9 of Hearts",
+                "6 of Spades"
+            ],
+            "message": "Human played: 6 of Spades"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:51.682441",
+        "event": "AI Card Played",
+        "details": {
+            "player": "AI",
+            "card": "7 of Spades",
+            "remaining_cards": 13
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:51.683600",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "7 of Spades",
+            "table_cards": [
+                "Queen of Diamonds",
+                "9 of Hearts",
+                "6 of Spades",
+                "7 of Spades"
+            ],
+            "message": "AI played: 7 of Spades"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:51.697188",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "AI",
+            "message": "AI is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:51.697188",
+        "event": "AI Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Ace of Spades",
+            "remaining_cards": 12
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:51.712412",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Ace of Spades",
+            "table_cards": [
+                "Queen of Diamonds",
+                "9 of Hearts",
+                "6 of Spades",
+                "7 of Spades",
+                "Ace of Spades"
+            ],
+            "message": "AI played: Ace of Spades"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:51.925763",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "King of Spades",
+            "remaining_cards": 3
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:51.942307",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "King of Spades",
+            "table_cards": [
+                "Queen of Diamonds",
+                "9 of Hearts",
+                "6 of Spades",
+                "7 of Spades",
+                "Ace of Spades",
+                "King of Spades"
+            ],
+            "message": "Human played: King of Spades"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:51.955313",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "Human",
+            "message": "Human is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:52.192592",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "King of Diamonds",
+            "remaining_cards": 2
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:52.193386",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "King of Diamonds",
+            "table_cards": [
+                "Queen of Diamonds",
+                "9 of Hearts",
+                "6 of Spades",
+                "7 of Spades",
+                "Ace of Spades",
+                "King of Spades",
+                "King of Diamonds"
+            ],
+            "message": "Human played: King of Diamonds"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:52.205157",
+        "event": "AI Play Attempt",
+        "details": {
+            "player": "AI",
+            "outcome": "No valid cards"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:52.212007",
+        "event": "Play Failed",
+        "details": {
+            "player": "AI",
+            "message": "AI couldn't play a valid card. Round Over."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:52.226637",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "AI",
+            "message": "AI is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:52.237325",
+        "event": "AI Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Queen of Diamonds",
+            "remaining_cards": 18
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:52.246554",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Queen of Diamonds",
+            "table_cards": [
+                "Queen of Diamonds"
+            ],
+            "message": "AI played: Queen of Diamonds"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:52.442837",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "9 of Spades",
+            "remaining_cards": 5
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:52.461203",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "9 of Spades",
+            "table_cards": [
+                "Queen of Diamonds",
+                "9 of Spades"
+            ],
+            "message": "Human played: 9 of Spades"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:52.469302",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "Human",
+            "message": "Human is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:52.691794",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "King of Hearts",
+            "remaining_cards": 4
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:52.691794",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "King of Hearts",
+            "table_cards": [
+                "Queen of Diamonds",
+                "9 of Spades",
+                "King of Hearts"
+            ],
+            "message": "Human played: King of Hearts"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:52.711226",
+        "event": "AI Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Queen of Hearts",
+            "remaining_cards": 17
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:52.719611",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Queen of Hearts",
+            "table_cards": [
+                "Queen of Diamonds",
+                "9 of Spades",
+                "King of Hearts",
+                "Queen of Hearts"
+            ],
+            "message": "AI played: Queen of Hearts"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:52.728689",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "AI",
+            "message": "AI is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:52.743436",
+        "event": "Play Failed",
+        "details": {
+            "player": "AI",
+            "message": "AI couldn't play a valid card. Round Over."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:52.982916",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "Queen of Clubs",
+            "remaining_cards": 7
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:52.992049",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "Queen of Clubs",
+            "table_cards": [
+                "Queen of Clubs"
+            ],
+            "message": "Human played: Queen of Clubs"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:52.998991",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "AI",
+            "message": "AI is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:53.010322",
+        "event": "Play Failed",
+        "details": {
+            "player": "AI",
+            "message": "AI couldn't play a valid card. Round Over."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:53.226814",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "7 of Hearts",
+            "remaining_cards": 6
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:53.242397",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "7 of Hearts",
+            "table_cards": [
+                "7 of Hearts"
+            ],
+            "message": "Human played: 7 of Hearts"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:53.260738",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "Human",
+            "message": "Human is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:53.493202",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "8 of Diamonds",
+            "remaining_cards": 5
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:53.493202",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "8 of Diamonds",
+            "table_cards": [
+                "7 of Hearts",
+                "8 of Diamonds"
+            ],
+            "message": "Human played: 8 of Diamonds"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:53.511865",
+        "event": "AI Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Jack of Diamonds",
+            "remaining_cards": 17
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:53.527146",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Jack of Diamonds",
+            "table_cards": [
+                "7 of Hearts",
+                "8 of Diamonds",
+                "Jack of Diamonds"
+            ],
+            "message": "AI played: Jack of Diamonds"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:53.542788",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "Human",
+            "message": "Human is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:53.784497",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "7 of Clubs",
+            "remaining_cards": 4
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:53.793013",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "7 of Clubs",
+            "table_cards": [
+                "7 of Hearts",
+                "8 of Diamonds",
+                "Jack of Diamonds",
+                "7 of Clubs"
+            ],
+            "message": "Human played: 7 of Clubs"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:53.815718",
+        "event": "AI Card Played",
+        "details": {
+            "player": "AI",
+            "card": "8 of Clubs",
+            "remaining_cards": 16
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:53.816693",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "8 of Clubs",
+            "table_cards": [
+                "7 of Hearts",
+                "8 of Diamonds",
+                "Jack of Diamonds",
+                "7 of Clubs",
+                "8 of Clubs"
+            ],
+            "message": "AI played: 8 of Clubs"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:53.830590",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "Human",
+            "message": "Human is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:54.260667",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "Queen of Diamonds",
+            "remaining_cards": 3
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:54.276389",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "Queen of Diamonds",
+            "table_cards": [
+                "7 of Hearts",
+                "8 of Diamonds",
+                "Jack of Diamonds",
+                "7 of Clubs",
+                "8 of Clubs",
+                "Queen of Diamonds"
+            ],
+            "message": "Human played: Queen of Diamonds"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:54.285631",
+        "event": "AI Play Attempt",
+        "details": {
+            "player": "AI",
+            "outcome": "No valid cards"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:54.303041",
+        "event": "Play Failed",
+        "details": {
+            "player": "AI",
+            "message": "AI couldn't play a valid card. Round Over."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:54.311837",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "Human",
+            "message": "Human is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:54.787054",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "9 of Spades",
+            "remaining_cards": 5
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:54.798841",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "9 of Spades",
+            "table_cards": [
+                "9 of Spades"
+            ],
+            "message": "Human played: 9 of Spades"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:54.799875",
+        "event": "AI Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Ace of Spades",
+            "remaining_cards": 21
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:54.820422",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Ace of Spades",
+            "table_cards": [
+                "9 of Spades",
+                "Ace of Spades"
+            ],
+            "message": "AI played: Ace of Spades"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:54.833930",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "AI",
+            "message": "AI is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:54.836082",
+        "event": "AI Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Jack of Spades",
+            "remaining_cards": 20
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:54.847665",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Jack of Spades",
+            "table_cards": [
+                "9 of Spades",
+                "Ace of Spades",
+                "Jack of Spades"
+            ],
+            "message": "AI played: Jack of Spades"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:56.843683",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "King of Hearts",
+            "remaining_cards": 4
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:56.853663",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "King of Hearts",
+            "table_cards": [
+                "9 of Spades",
+                "Ace of Spades",
+                "Jack of Spades",
+                "King of Hearts"
+            ],
+            "message": "Human played: King of Hearts"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:56.862937",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "Human",
+            "message": "Human is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:58.142391",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "Queen of Hearts",
+            "remaining_cards": 3
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:58.142391",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "Queen of Hearts",
+            "table_cards": [
+                "9 of Spades",
+                "Ace of Spades",
+                "Jack of Spades",
+                "King of Hearts",
+                "Queen of Hearts"
+            ],
+            "message": "Human played: Queen of Hearts"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:58.169329",
+        "event": "Play Failed",
+        "details": {
+            "player": "AI",
+            "message": "AI couldn't play a valid card. Round Over."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:07:58.177622",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "Human",
+            "message": "Human is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:01.558279",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "Queen of Spades",
+            "remaining_cards": 5
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:01.576026",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "Queen of Spades",
+            "table_cards": [
+                "Queen of Spades"
+            ],
+            "message": "Human played: Queen of Spades"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:01.581477",
+        "event": "Play Failed",
+        "details": {
+            "player": "AI",
+            "message": "AI couldn't play a valid card. Round Over."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:01.604174",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "Human",
+            "message": "Human is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:02.042815",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "8 of Spades",
+            "remaining_cards": 5
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:02.062464",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "8 of Spades",
+            "table_cards": [
+                "8 of Spades"
+            ],
+            "message": "Human played: 8 of Spades"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:02.081466",
+        "event": "AI Card Played",
+        "details": {
+            "player": "AI",
+            "card": "9 of Spades",
+            "remaining_cards": 25
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:02.085644",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "9 of Spades",
+            "table_cards": [
+                "8 of Spades",
+                "9 of Spades"
+            ],
+            "message": "AI played: 9 of Spades"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:02.103518",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "Human",
+            "message": "Human is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:03.361370",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "Ace of Hearts",
+            "remaining_cards": 4
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:03.378188",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "Ace of Hearts",
+            "table_cards": [
+                "8 of Spades",
+                "9 of Spades",
+                "Ace of Hearts"
+            ],
+            "message": "Human played: Ace of Hearts"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:03.393737",
+        "event": "AI Card Played",
+        "details": {
+            "player": "AI",
+            "card": "King of Hearts",
+            "remaining_cards": 24
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:03.411450",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "King of Hearts",
+            "table_cards": [
+                "8 of Spades",
+                "9 of Spades",
+                "Ace of Hearts",
+                "King of Hearts"
+            ],
+            "message": "AI played: King of Hearts"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:03.428171",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "Human",
+            "message": "Human is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:04.340662",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "10 of Hearts",
+            "remaining_cards": 3
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:04.359460",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "10 of Hearts",
+            "table_cards": [
+                "8 of Spades",
+                "9 of Spades",
+                "Ace of Hearts",
+                "King of Hearts",
+                "10 of Hearts"
+            ],
+            "message": "Human played: 10 of Hearts"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:04.362749",
+        "event": "AI Card Played",
+        "details": {
+            "player": "AI",
+            "card": "7 of Hearts",
+            "remaining_cards": 23
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:04.379598",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "7 of Hearts",
+            "table_cards": [
+                "8 of Spades",
+                "9 of Spades",
+                "Ace of Hearts",
+                "King of Hearts",
+                "10 of Hearts",
+                "7 of Hearts"
+            ],
+            "message": "AI played: 7 of Hearts"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:04.394936",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "AI",
+            "message": "AI is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:04.409337",
+        "event": "AI Card Played",
+        "details": {
+            "player": "AI",
+            "card": "8 of Hearts",
+            "remaining_cards": 22
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:04.417699",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "8 of Hearts",
+            "table_cards": [
+                "8 of Spades",
+                "9 of Spades",
+                "Ace of Hearts",
+                "King of Hearts",
+                "10 of Hearts",
+                "7 of Hearts",
+                "8 of Hearts"
+            ],
+            "message": "AI played: 8 of Hearts"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:05.423125",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "6 of Hearts",
+            "remaining_cards": 2
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:05.441616",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "6 of Hearts",
+            "table_cards": [
+                "8 of Spades",
+                "9 of Spades",
+                "Ace of Hearts",
+                "King of Hearts",
+                "10 of Hearts",
+                "7 of Hearts",
+                "8 of Hearts",
+                "6 of Hearts"
+            ],
+            "message": "Human played: 6 of Hearts"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:05.452546",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "Human",
+            "message": "Human is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:06.293731",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "6 of Clubs",
+            "remaining_cards": 1
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:06.310162",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "6 of Clubs",
+            "table_cards": [
+                "8 of Spades",
+                "9 of Spades",
+                "Ace of Hearts",
+                "King of Hearts",
+                "10 of Hearts",
+                "7 of Hearts",
+                "8 of Hearts",
+                "6 of Hearts",
+                "6 of Clubs"
+            ],
+            "message": "Human played: 6 of Clubs"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:06.315692",
+        "event": "AI Card Played",
+        "details": {
+            "player": "AI",
+            "card": "7 of Clubs",
+            "remaining_cards": 21
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:06.335640",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "7 of Clubs",
+            "table_cards": [
+                "8 of Spades",
+                "9 of Spades",
+                "Ace of Hearts",
+                "King of Hearts",
+                "10 of Hearts",
+                "7 of Hearts",
+                "8 of Hearts",
+                "6 of Hearts",
+                "6 of Clubs",
+                "7 of Clubs"
+            ],
+            "message": "AI played: 7 of Clubs"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:06.349880",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "AI",
+            "message": "AI is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:06.351981",
+        "event": "AI Card Played",
+        "details": {
+            "player": "AI",
+            "card": "8 of Clubs",
+            "remaining_cards": 20
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:06.363515",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "8 of Clubs",
+            "table_cards": [
+                "8 of Spades",
+                "9 of Spades",
+                "Ace of Hearts",
+                "King of Hearts",
+                "10 of Hearts",
+                "7 of Hearts",
+                "8 of Hearts",
+                "6 of Hearts",
+                "6 of Clubs",
+                "7 of Clubs",
+                "8 of Clubs"
+            ],
+            "message": "AI played: 8 of Clubs"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:07.265579",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "Ace of Diamonds",
+            "remaining_cards": 0
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:07.273574",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "Ace of Diamonds",
+            "table_cards": [
+                "8 of Spades",
+                "9 of Spades",
+                "Ace of Hearts",
+                "King of Hearts",
+                "10 of Hearts",
+                "7 of Hearts",
+                "8 of Hearts",
+                "6 of Hearts",
+                "6 of Clubs",
+                "7 of Clubs",
+                "8 of Clubs",
+                "Ace of Diamonds"
+            ],
+            "message": "Human played: Ace of Diamonds"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:08:07.280626",
+        "event": "Game Over",
+        "details": {
+            "message": "The game has ended."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:21:17.633038",
+        "event": "Game Initialized",
+        "details": {
+            "message": "A new game of Durak has started."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:21:17.649138",
+        "event": "Card Drawn",
+        "details": {
+            "player": "Human",
+            "card": "9 of Clubs"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:21:17.649138",
+        "event": "Card Drawn",
+        "details": {
+            "player": "AI",
+            "card": "Jack of Clubs"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:21:17.665537",
+        "event": "Card Drawn",
+        "details": {
+            "player": "Human",
+            "card": "9 of Spades"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:21:17.690787",
+        "event": "Card Drawn",
+        "details": {
+            "player": "AI",
+            "card": "Queen of Spades"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:21:17.707553",
+        "event": "Card Drawn",
+        "details": {
+            "player": "Human",
+            "card": "Queen of Clubs"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:21:17.718123",
+        "event": "Card Drawn",
+        "details": {
+            "player": "AI",
+            "card": "8 of Hearts"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:21:17.738667",
+        "event": "Card Drawn",
+        "details": {
+            "player": "Human",
+            "card": "Jack of Hearts"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:21:17.757054",
+        "event": "Card Drawn",
+        "details": {
+            "player": "AI",
+            "card": "10 of Diamonds"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:21:17.764826",
+        "event": "Card Drawn",
+        "details": {
+            "player": "Human",
+            "card": "7 of Clubs"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:21:17.774382",
+        "event": "Card Drawn",
+        "details": {
+            "player": "AI",
+            "card": "Ace of Hearts"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:21:17.791761",
+        "event": "Card Drawn",
+        "details": {
+            "player": "Human",
+            "card": "King of Spades"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:21:17.813916",
+        "event": "Card Drawn",
+        "details": {
+            "player": "AI",
+            "card": "10 of Spades"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:21:17.832580",
+        "event": "Game Setup",
+        "details": {
+            "trump_suit": "Diamonds",
+            "deck_size": 24,
+            "message": "Deck shuffled, cards dealt, and trump suit determined."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:21:17.853056",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "AI",
+            "defending_player": "Human",
+            "message": "AI is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:21:17.873483",
+        "event": "AI Card Played",
+        "details": {
+            "player": "AI",
+            "card": "10 of Diamonds",
+            "remaining_cards": 5
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:21:17.890110",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "10 of Diamonds",
+            "table_cards": []
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:21:48.762264",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "9 of Clubs",
+            "remaining_cards": 5
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:21:48.776304",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "9 of Clubs",
+            "table_cards": []
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:21:48.799951",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "Human",
+            "defending_player": "AI",
+            "message": "Human is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:22:00.567110",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "9 of Spades",
+            "remaining_cards": 4
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:22:00.567110",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "9 of Spades",
+            "table_cards": []
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:22:00.595096",
+        "event": "AI Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Queen of Spades",
+            "remaining_cards": 4
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:22:00.614364",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Queen of Spades",
+            "table_cards": []
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:22:00.630626",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "AI",
+            "defending_player": "Human",
+            "message": "AI is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:22:00.647761",
+        "event": "AI Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Jack of Clubs",
+            "remaining_cards": 3
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:22:00.666231",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Jack of Clubs",
+            "table_cards": []
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:22:11.840847",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "Queen of Clubs",
+            "remaining_cards": 3
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:22:11.840847",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "Queen of Clubs",
+            "table_cards": []
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:22:11.867869",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "AI",
+            "defending_player": "Human",
+            "message": "AI is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:22:11.879278",
+        "event": "AI Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Ace of Hearts",
+            "remaining_cards": 2
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:22:11.897133",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Ace of Hearts",
+            "table_cards": []
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:22:16.657332",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "Jack of Hearts",
+            "remaining_cards": 2
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:22:16.657332",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "Jack of Hearts",
+            "table_cards": []
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:22:16.681728",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "Human",
+            "defending_player": "AI",
+            "message": "Human is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:22:23.035167",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "King of Spades",
+            "remaining_cards": 1
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:22:23.054712",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "King of Spades",
+            "table_cards": []
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:22:23.067946",
+        "event": "AI Card Played",
+        "details": {
+            "player": "AI",
+            "card": "8 of Hearts",
+            "remaining_cards": 1
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:22:23.077602",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "8 of Hearts",
+            "table_cards": []
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:22:23.081432",
+        "event": "New Turn Started",
+        "details": {
+            "attacking_player": "Human",
+            "defending_player": "AI",
+            "message": "Human is attacking this turn."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:22:28.466812",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "7 of Clubs",
+            "remaining_cards": 0
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:22:28.475862",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "7 of Clubs",
+            "table_cards": []
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:22:28.496718",
+        "event": "AI Card Played",
+        "details": {
+            "player": "AI",
+            "card": "10 of Spades",
+            "remaining_cards": 0
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:22:28.496718",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "10 of Spades",
+            "table_cards": []
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:22:28.512509",
+        "event": "Game Over",
+        "details": {
+            "winner": "Human",
+            "durak": "AI"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:31:51.178404",
+        "event": "Game Initialized",
+        "details": {
+            "message": "Welcome to the exciting game of Durak!"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:31:51.193516",
+        "event": "Card Drawn",
+        "details": {
+            "player": "Human",
+            "card": "10 of Hearts"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:31:51.210781",
+        "event": "Card Drawn",
+        "details": {
+            "player": "AI",
+            "card": "Ace of Diamonds"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:31:51.228465",
+        "event": "Card Drawn",
+        "details": {
+            "player": "Human",
+            "card": "Ace of Spades"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:31:51.248617",
+        "event": "Card Drawn",
+        "details": {
+            "player": "AI",
+            "card": "6 of Spades"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:31:51.254588",
+        "event": "Card Drawn",
+        "details": {
+            "player": "Human",
+            "card": "8 of Hearts"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:31:51.266937",
+        "event": "Card Drawn",
+        "details": {
+            "player": "AI",
+            "card": "9 of Clubs"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:31:51.278716",
+        "event": "Card Drawn",
+        "details": {
+            "player": "Human",
+            "card": "8 of Diamonds"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:31:51.299137",
+        "event": "Card Drawn",
+        "details": {
+            "player": "AI",
+            "card": "Queen of Clubs"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:31:51.304390",
+        "event": "Card Drawn",
+        "details": {
+            "player": "Human",
+            "card": "Ace of Hearts"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:31:51.311822",
+        "event": "Card Drawn",
+        "details": {
+            "player": "AI",
+            "card": "King of Hearts"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:31:51.329959",
+        "event": "Card Drawn",
+        "details": {
+            "player": "Human",
+            "card": "King of Clubs"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:31:51.345693",
+        "event": "Card Drawn",
+        "details": {
+            "player": "AI",
+            "card": "6 of Diamonds"
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:31:51.367450",
+        "event": "Game Setup",
+        "details": {
+            "trump_suit": "Spades",
+            "deck_size": 24,
+            "message": "The stage is set, and cards are dealt."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:31:51.383157",
+        "event": "Turn Start",
+        "details": {
+            "attacking_player": "Human",
+            "defending_player": "AI",
+            "message": "A new turn has begun."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:32:08.038449",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "10 of Hearts",
+            "remaining_cards": 5
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:32:08.053505",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Ace of Diamonds",
+            "remaining_cards": 5
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:32:08.066012",
+        "event": "Turn Start",
+        "details": {
+            "attacking_player": "Human",
+            "defending_player": "AI",
+            "message": "A new turn has begun."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:32:32.090078",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "Ace of Spades",
+            "remaining_cards": 4
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:32:32.100229",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "6 of Spades",
+            "remaining_cards": 4
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:32:32.115900",
+        "event": "Turn Start",
+        "details": {
+            "attacking_player": "AI",
+            "defending_player": "Human",
+            "message": "A new turn has begun."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:32:32.129659",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "9 of Clubs",
+            "remaining_cards": 3
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:32:33.078859",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "8 of Hearts",
+            "remaining_cards": 3
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:32:33.094366",
+        "event": "Turn Start",
+        "details": {
+            "attacking_player": "Human",
+            "defending_player": "AI",
+            "message": "A new turn has begun."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:32:34.660117",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "8 of Diamonds",
+            "remaining_cards": 2
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:32:34.668462",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "Queen of Clubs",
+            "remaining_cards": 2
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:32:34.685927",
+        "event": "Turn Start",
+        "details": {
+            "attacking_player": "Human",
+            "defending_player": "AI",
+            "message": "A new turn has begun."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:32:35.376605",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "Ace of Hearts",
+            "remaining_cards": 1
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:32:35.384446",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "King of Hearts",
+            "remaining_cards": 1
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:32:35.399978",
+        "event": "Turn Start",
+        "details": {
+            "attacking_player": "AI",
+            "defending_player": "Human",
+            "message": "A new turn has begun."
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:32:35.409446",
+        "event": "Card Played",
+        "details": {
+            "player": "AI",
+            "card": "6 of Diamonds",
+            "remaining_cards": 0
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:32:36.119181",
+        "event": "Card Played",
+        "details": {
+            "player": "Human",
+            "card": "King of Clubs",
+            "remaining_cards": 0
+        }
+    },
+    {
+        "timestamp": "2024-04-09T03:32:36.132424",
+        "event": "Game Over",
+        "details": {
+            "winner": "AI",
+            "message": "The game has concluded with a champion."
+        }
+    }
+]

@@ -1,0 +1,156 @@
+The trump suit is Clubs
+Number of cards left in the deck: 24
+
+New round!
+
+Human is attacking.
+
+Your hand: 6 of Hearts, King of Hearts, Ace of Clubs, Ace of Hearts, 8 of Hearts, 8 of Clubs
+ AI hand: 7 of Spades, 7 of Clubs, Jack of Spades, Jack of Clubs, 10 of Clubs, 9 of Spades
+The trump suit is Clubs
+Number of cards left in the deck: 24
+
+New round!
+
+Human is attacking.
+
+Your hand: Ace of Diamonds, 10 of Hearts, 8 of Diamonds, King of Spades, 10 of Spades, King of Clubs
+ AI hand: Queen of Hearts, King of Diamonds, Queen of Clubs, 6 of Diamonds, Ace of Hearts, 6 of Hearts
+The trump suit is Clubs
+Number of cards left in the deck: 24
+
+New round!
+
+Human is attacking.
+
+Your hand: 7 of Hearts, Queen of Spades, 8 of Spades, King of Hearts, Jack of Spades, 10 of Diamonds
+ AI hand: King of Spades, Queen of Clubs, 9 of Hearts, Ace of Diamonds, 10 of Hearts, 9 of Spades
+The trump suit is Spades
+Number of cards left in the deck: 24
+
+New round!
+
+Human is attacking.
+
+Your hand: 8 of Hearts, Jack of Hearts, 9 of Hearts, 7 of Diamonds, King of Diamonds, 6 of Diamonds
+ AI hand: 7 of Spades, Jack of Diamonds, Ace of Hearts, 8 of Clubs, Ace of Diamonds, Queen of Clubs
+The trump suit is Spades
+Number of cards left in the deck: 24
+
+New round!
+
+AI is attacking.
+AI selects Ace of Hearts because it's the first turn, playing highest card.
+AI played: Ace of Hearts
+Number of cards on the table: 1
+
+Human is defending.
+Your hand: King of Clubs, 8 of Clubs, Queen of Clubs, 8 of Spades, 6 of Diamonds, King of Hearts
+The trump suit is Diamonds
+Number of cards left in the deck: 24
+
+New round!
+
+AI is attacking.
+AI selects 8 of Diamonds because it's the first turn, playing highest trump card.
+AI played: 8 of Diamonds
+Number of cards on the table: 1
+
+Human is defending.
+Your hand: 9 of Diamonds, Queen of Clubs, Jack of Diamonds, 8 of Spades, 6 of Diamonds, Jack of Hearts
+The trump suit is Spades
+Number of cards left in the deck: 24
+
+New round!
+
+Human is attacking.
+
+Your hand: 7 of Spades, 6 of Hearts, Jack of Spades, 8 of Hearts, 6 of Diamonds, 9 of Diamonds
+ AI hand: 8 of Clubs, Ace of Hearts, King of Spades, Ace of Clubs, Ace of Spades, Queen of Spades
+The trump suit is Diamonds
+Number of cards left in the deck: 24
+
+New round!
+
+AI is attacking.
+AI selects Jack of Clubs because it's the first turn, playing highest card.
+AI played: Jack of Clubs
+Number of cards on the table: 1
+
+Human is defending.
+Your hand: King of Hearts, 6 of Spades, 9 of Diamonds, 10 of Spades, Jack of Hearts, Ace of Spades
+Human played: King of Hearts
+Human could not defend with King of Hearts. Round Over.
+Number of cards in Human's hand after taking cards: 7
+ After redistribution, AI has 6 cards.
+After redistribution, Human has 7 cards.
+Number of cards left in the deck: 23
+Human was unable to defend successfully so the roles will be be same but the human will take cards from table
+
+AI is attacking.
+AI selects 6 of Diamonds because it's the first turn, playing highest trump card.
+AI played: 6 of Diamonds
+Number of cards on the table: 1
+
+Human is defending.
+Your hand: 6 of Spades, 9 of Diamonds, 10 of Spades, Jack of Hearts, Ace of Spades, Jack of Clubs, King of Hearts
+Human played: 6 of Spades
+Human could not defend with 6 of Spades. Round Over.
+Number of cards in Human's hand after taking cards: 8
+ After redistribution, AI has 6 cards.
+After redistribution, Human has 8 cards.
+Number of cards left in the deck: 22
+Human was unable to defend successfully so the roles will be be same but the human will take cards from table
+
+AI is attacking.
+AI selects 10 of Diamonds because it's the first turn, playing highest trump card.
+AI played: 10 of Diamonds
+Number of cards on the table: 1
+
+Human is defending.
+Your hand: 9 of Diamonds, 10 of Spades, Jack of Hearts, Ace of Spades, Jack of Clubs, King of Hearts, 6 of Diamonds, 6 of Spades
+Human played: 9 of Diamonds
+Human could not defend with 9 of Diamonds. Round Over.
+Number of cards in Human's hand after taking cards: 9
+ After redistribution, AI has 6 cards.
+After redistribution, Human has 9 cards.
+Number of cards left in the deck: 21
+Human was unable to defend successfully so the roles will be be same but the human will take cards from table
+
+AI is attacking.
+AI selects Queen of Diamonds because it's the first turn, playing highest trump card.
+AI played: Queen of Diamonds
+Number of cards on the table: 1
+
+Human is defending.
+Your hand: 10 of Spades, Jack of Hearts, Ace of Spades, Jack of Clubs, King of Hearts, 6 of Diamonds, 6 of Spades, 10 of Diamonds, 9 of Diamonds
+Human played: 10 of Spades
+Human could not defend with 10 of Spades. Round Over.
+Number of cards in Human's hand after taking cards: 10
+ After redistribution, AI has 6 cards.
+After redistribution, Human has 10 cards.
+Number of cards left in the deck: 20
+Human was unable to defend successfully so the roles will be be same but the human will take cards from table
+
+AI is attacking.
+AI selects Queen of Hearts because it's the first turn, playing highest card.
+AI played: Queen of Hearts
+Number of cards on the table: 1
+
+Human is defending.
+Your hand: Jack of Hearts, Ace of Spades, Jack of Clubs, King of Hearts, 6 of Diamonds, 6 of Spades, 10 of Diamonds, 9 of Diamonds, Queen of Diamonds, 10 of Spades
+Human played: Jack of Hearts
+Human could not defend with Jack of Hearts. Round Over.
+Number of cards in Human's hand after taking cards: 11
+ After redistribution, AI has 6 cards.
+After redistribution, Human has 11 cards.
+Number of cards left in the deck: 19
+Human was unable to defend successfully so the roles will be be same but the human will take cards from table
+
+AI is attacking.
+AI selects 10 of Hearts because it's the first turn, playing highest card.
+AI played: 10 of Hearts
+Number of cards on the table: 1
+
+Human is defending.
+Your hand: Ace of Spades, Jack of Clubs, King of Hearts, 6 of Diamonds, 6 of Spades, 10 of Diamonds, 9 of Diamonds, Queen of Diamonds, 10 of Spades, Queen of Hearts, Jack of Hearts
